@@ -50,7 +50,7 @@ cat <<END > "$texfile"
 \\renewcommand{\\headrulewidth}{0pt}
 \\setcounter{page}{$fp}
 \\begin{document}
-\\ 
+\\
 END
 
 i="$fp"
@@ -66,4 +66,4 @@ of="$r-numbered.pdf"
 pdftk "$f" multibackground "$pdff" output "$of"
 #pdfovl "$f" "$pdff" "$of"
 echo "Output written to \"$of\" - check volume, number, and page numbers"
-
+echo "JoCG $v($n), $fp–$lp, $y"
